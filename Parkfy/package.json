@@ -9,6 +9,7 @@
     "web": "expo start --web"
   },
   "dependencies": {
+    "@fontsource/poppins": "^4.5.9",
     "expo": "~46.0.8",
     "expo-status-bar": "~1.4.0",
     "react": "18.0.0",
