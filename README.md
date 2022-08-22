@@ -11,6 +11,9 @@ Essa é uma versão que será compativel para emular o aplicativo ao rodar o com
 Comandos NPM para instalar
 npm install -g expo-cli
 npm install -g react-router-dom
+npm install --save styled-component
+npm install @react-navigation/native
+npm install @react-navigation/stack 
 
 
 Comando para iniciar o projeto no celular do android studio
