@@ -179,21 +179,24 @@ function Screen_Entrar(){
  
   return (
     <View style={css_Entrar.body}>
-
-      <View style={css_Entrar.inputView}>
+      
+      <View style={css_Entrar.emailBtn}>
         <TextInput
-          style={css_Entrar.TextInput}
-          placeholder="Email."
-          placeholderTextColor="#003f5c"
+          style={css_Entrar.emailText}
+          placeholder="Email"
+          placeholderTextColor="#BDBDBD"
+          autoCapitalize = "none"
           onChangeText={(email) => setEmail(email)}
         />
       </View>
+      
+      <Text style={css_Entrar.entrarLoginText}>Entrar</Text>
  
-      <View style={css_Entrar.inputView}>
+      <View style={css_Entrar.senhaBtn}>
         <TextInput
-          style={css_Entrar.TextInput}
-          placeholder="Password."
-          placeholderTextColor="#003f5c"
+          style={css_Entrar.senhaText}
+          placeholder="Senha"
+          placeholderTextColor="#BDBDBD"
           secureTextEntry={true}
           onChangeText={(password) => setPassword(password)}
         />
@@ -215,6 +218,18 @@ const css_Entrar = StyleSheet.create({
     backgroundColor: "white",
     alignItems: "center",
     justifyContent: "center",
+  },
+  
+  entrarLoginText: {
+    width: PixelRatio.roundToNearestPixel(89),
+    height: PixelRatio.roundToNearestPixel(36),
+    fontSize: PixelRatio.roundToNearestPixel(30),
+    fontWeight: "600",
+    fontStyle: "normal",
+    lineHeight: PixelRatio.roundToNearestPixel(30),
+    textAlign: "center",
+    color: "#000000",
+    bottom: PixelRatio.roundToNearestPixel(250)
   },
  
   image: {
@@ -279,7 +294,54 @@ const css_Entrar = StyleSheet.create({
   visitanteText:{
     marginTop: 20,
     color: '#2DCDB0',
+  },
+
+  emailBtn:{
+    width: PixelRatio.roundToNearestPixel(343),
+    height: PixelRatio.roundToNearestPixel(46),
+    display: 'flex',
+    flexDirection:"column",
+    alignItems:"left",
+    padding:(15,15),
+    borderRadius: PixelRatio.roundToNearestPixel(8),
+    backgroundColor: "#F6F6F6",
+    borderWidth: PixelRatio.roundToNearestPixel(1),
+    borderColor: "rgba(232, 232, 232, 1.0)",
+    bottom: PixelRatio.roundToNearestPixel(80),
+  },
+
+  emailText:{
+    height: PixelRatio.roundToNearestPixel(19),
+    fontSize: PixelRatio.roundToNearestPixel(16),
+    fontWeight: "500",
+    fontStyle: "normal",
+    lineHeight: PixelRatio.roundToNearestPixel(16),
+    color: "black"
+  },
+  
+  senhaBtn:{
+    width: PixelRatio.roundToNearestPixel(343),
+    height: PixelRatio.roundToNearestPixel(46),
+    display: 'flex',
+    flexDirection:"column",
+    alignItems:"left",
+    padding:(15,15),
+    borderRadius: PixelRatio.roundToNearestPixel(8),
+    backgroundColor: "#F6F6F6",
+    borderWidth: PixelRatio.roundToNearestPixel(1),
+    borderColor: "rgba(232, 232, 232, 1.0)",
+    bottom: PixelRatio.roundToNearestPixel(100),
+  },
+
+  senhaText:{
+    height: PixelRatio.roundToNearestPixel(19),
+    fontSize: PixelRatio.roundToNearestPixel(16),
+    fontWeight: "500",
+    fontStyle: "normal",
+    lineHeight: PixelRatio.roundToNearestPixel(16),
+    color: "black"
   }
+
 });
 
 
