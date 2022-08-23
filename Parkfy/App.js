@@ -203,14 +203,21 @@ const css_Inicial = StyleSheet.create({
   },
 });
 
-function Screen_Entrar(){
+function Screen_Entrar({navigation}){
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const closeButton = () => {
+    navigation.navigate('Screen_Inicial')
+  }
  
   return (
-    <View style={css_Entrar.emailView}>
-
-      <View style={css_Entrar.emailText}>
+    <View style={css_Entrar.entrarBody}>
+      
+      <TouchableOpacity onPress={closeButton} style={css_Entrar.closeBtn}>
+        <Image source={require("./assets/close.png")}/>
+      </TouchableOpacity>
+      
+      <View style={css_Entrar.emailView}>
         <TextInput
          style={css_Entrar.emailText}
          placeholder="Email"
@@ -220,6 +227,10 @@ function Screen_Entrar(){
       </View>
 
       <Text style={css_Entrar.entrarLoginText}>Entrar</Text>
+      
+      <TouchableOpacity>
+        <Text style={css_Entrar.cadastroBtn}>Cadastre-se</Text>
+      </TouchableOpacity>
 
       <View style={css_Entrar.senhaView}>
         <TextInput
@@ -232,143 +243,94 @@ function Screen_Entrar(){
       </View>
  
       <TouchableOpacity>
-        <Text style={css_Entrar.forgot_button}>Forgot Password?</Text>
+        <Text style={css_Entrar.forgotBtn}>Esqueci minha senha</Text>
       </TouchableOpacity>
  
       <TouchableOpacity style={css_Entrar.loginBtn}>
-        <Text style={css_Entrar.loginText}>LOGIN</Text>
+        <Text style={css_Entrar.loginText}>Entrar</Text>
       </TouchableOpacity>
     </View>
   )
 }
 const css_Entrar = StyleSheet.create({
-  emailView:{
-    width: PixelRatio.roundToNearestPixel(343),
-    height: PixelRatio.roundToNearestPixel(46),
-    display: 'flex',
-    flexDirection:"column",
-    alignItems:"center",
-    padding:(15,15),
-    borderRadius: PixelRatio.roundToNearestPixel(8),
-    backgroundColor: "#F6F6F6",
-    borderWidth: PixelRatio.roundToNearestPixel(1),
-    borderColor: "rgba(232, 232, 232, 1.0)",
-    bottom: PixelRatio.roundToNearestPixel(80),
-  },
-
-  emailText:{
-    height: PixelRatio.roundToNearestPixel(19),
-    fontSize: PixelRatio.roundToNearestPixel(16),
-    fontWeight: "500",
-    fontStyle: "normal",
-    lineHeight: PixelRatio.roundToNearestPixel(16),
-    color: "black"
-  },
-
-  senhaView:{
-    width: PixelRatio.roundToNearestPixel(343),
-    height: PixelRatio.roundToNearestPixel(46),
-    display: 'flex',
-    flexDirection:"column",
-    alignItems:"flex-start",
-    padding:(15,15),
-    borderRadius: PixelRatio.roundToNearestPixel(8),
-    backgroundColor: "#F6F6F6",
-    borderWidth: PixelRatio.roundToNearestPixel(1),
-    borderColor: "rgba(232, 232, 232, 1.0)",
-    bottom: PixelRatio.roundToNearestPixel(100),
-  },
-
-  senhaText:{
-    height: PixelRatio.roundToNearestPixel(19),
-    fontSize: PixelRatio.roundToNearestPixel(16),
-    fontWeight: "500",
-    fontStyle: "normal",
-    lineHeight: PixelRatio.roundToNearestPixel(16),
-    color: "black"
-  },
-
   entrarLoginText: {
-    width: PixelRatio.roundToNearestPixel(89),
-    height: PixelRatio.roundToNearestPixel(36),
-    fontSize: PixelRatio.roundToNearestPixel(30),
+    fontSize: 30,
     fontWeight: "600",
     fontStyle: "normal",
-    lineHeight: PixelRatio.roundToNearestPixel(30),
+    lineHeight: 30,
     textAlign: "center",
     color: "#000000",
-    bottom: PixelRatio.roundToNearestPixel(250)
+    top: 20,
   },
-  body: {
-    flex: 1,
-    backgroundColor: "white",
-    alignItems: "center",
-    justifyContent: "center",
+  
+  emailView: {
+    top: PixelRatio.roundToNearestPixel(130),
+    left: PixelRatio.roundToNearestPixel(18),
   },
- 
-  image: {
-    marginBottom: 40,
-    alignItems: "center",
-    justifyContent: "center",
+  
+  emailText: {
+    fontSize: 16,
+    fontWeight: "500",
+    fontStyle: "normal",
+    lineHeight: 16,
   },
- 
-  inputView: {
-    backgroundColor: "#E8E8E8",
-    borderRadius: 30,
-    width: '70%',
-    height: 45,
-    marginBottom: 20, 
-    alignItems: "center",
+  
+  senhaView: {
+    top: PixelRatio.roundToNearestPixel(110),
+    left: PixelRatio.roundToNearestPixel(18),
   },
- 
-  TextInput: {
-    height: 50,
-    flex: 1,
-    padding: 10,
-    marginLeft: 20,
-    backgroundColor: '#E8E8E8',
+  
+  senhaText: {
+    fontSize: 16,
+    fontWeight: "500",
+    fontStyle: "normal",
+    lineHeight: 16,
   },
- 
-  forgot_button: {
-    height: 30,
-    marginBottom: 30,
-    color: 'grey',
+  
+  forgotBtn: {
+    height: PixelRatio.roundToNearestPixel(19),
+    width: PixelRatio.roundToNearestPixel(136),
+    top: PixelRatio.roundToNearestPixel(140),
+    color: "#2DCDB0",
+    marginLeft: PixelRatio.roundToNearestPixel(130)
   },
- 
-  entrarBtn: {
-    width: "80%",
-    borderRadius: 25,
-    height: 50,
-    alignItems: "center",
-    justifyContent: "center",
-    marginTop: 40,
-    backgroundColor: "#2DCDB0",
-    
+  
+  loginBtn: {
+    display: 'flex',
+    flexDirection:"column",
+    alignItems: 'center',
+    padding:(16,16),
+    position: "absolute",
+    height: PixelRatio.roundToNearestPixel(56),
+    top: PixelRatio.roundToNearestPixel(310),
+    width: PixelRatio.roundToNearestPixel(343),
+    backgroundColor: '#2DCDB0',
+    borderRadius: PixelRatio.roundToNearestPixel(100),
+    marginLeft: PixelRatio.roundToNearestPixel(25)
   },
-  entrarText:{
+  
+  loginText: {
+    width: PixelRatio.roundToNearestPixel(80),
+    height: PixelRatio.roundToNearestPixel(24),
     color:'white',
+    fontWeight: '600',
+    fontSize: PixelRatio.roundToNearestPixel(20),
+    lineHeight: PixelRatio.roundToNearestPixel(24),
+    textAlign: 'center',
   },
-
-  cadastrarBtn: {
-    width: "80%",
-    borderRadius: 25,
-    height: 50,
-    alignItems: "center",
-    justifyContent: "center",
-    marginTop: 20,
-    backgroundColor: "#2DCDB0",
+  
+  cadastroBtn: {
+    textAlign: "right",
+    marginRight: PixelRatio.roundToNearestPixel(20),
+    top: PixelRatio.roundToNearestPixel(-5),
+    color: "#2DCDB0",
   },
-  cadastrarText:{
-    width: 104,
-    height: 24,
-    color:'white',
-    textAlign: "center",
-  },
-
-  visitanteText:{
-    marginTop: 20,
-    color: '#2DCDB0',
+  
+  closeBtn: {
+    marginLeft: 25,
+    top: 65
   }
+  
 });
 
 
