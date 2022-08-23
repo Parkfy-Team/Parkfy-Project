@@ -1,6 +1,8 @@
-import { StatusBar } from "expo-status-bar";
+import { StatusBar } from 'react-native';
+import { useFonts } from 'expo-font';
 import React, { useState } from "react";
 import {ScrollView,
+  SafeAreaView,
   FlatList,
   PixelRatio,
   StyleSheet,
@@ -14,25 +16,36 @@ import {ScrollView,
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from "@react-navigation/stack";
 const Stack = createStackNavigator();
+
  
-function App() {
+function App() {  
+
+  const [fontsLoaded] = useFonts({
+    'poppins_regular': require('./assets/fonts/poppins_regular.ttf'),
+  });
+
+  if (!fontsLoaded) {
+    return null;
+  }
+
   return (
-    <NavigationContainer>
-      <Stack.Navigator screenOptions={{headerShown: false}}>
-        <Stack.Screen 
+    <>
+      <NavigationContainer>
+      <Stack.Navigator screenOptions={{ headerShown: false }}>
+        <Stack.Screen
           name='Screen_Inicial'
-          component={Screen_Inicial}
-        />
-        <Stack.Screen 
-          name='Screen_Entrar'          
-          component={Screen_Entrar}
-        />            
+          component={Screen_Inicial} />
+        <Stack.Screen
+          name='Screen_Entrar'
+          component={Screen_Entrar} />
       </Stack.Navigator>
     </NavigationContainer>
+    </>
   )
 }
  
 function Screen_Inicial({navigation}){
+
   const entrarButton = () => {
     navigation.navigate('Screen_Entrar')
   }
@@ -41,26 +54,32 @@ function Screen_Inicial({navigation}){
   }
 
   return(
-  <View style={css_Inicial.body}>
+    <>
+    <StatusBar barStyle={'light-content'}></StatusBar>
+      <View style={css_Inicial.body}>
 
-    <Image style={css_Inicial.image} source={require("./assets/logo.png")} />
+      <Image style={css_Inicial.image} source={require("./assets/logo.png")} />
 
-    <Text style={css_Inicial.nomeText}>Park<Text style={{color: 'white'}}>Fy</Text> </Text>
+      <Text style={css_Inicial.nomeText}>Park<Text style={{color: 'white'}}>Fy</Text> </Text>
 
-    <Text style={css_Inicial.sloganText}>A gente procura, você estaciona</Text>
+      <Text style={css_Inicial.sloganText}>A gente procura, você estaciona</Text>
 
-    <TouchableOpacity onPress={entrarButton} style={css_Inicial.entrarBtn}>
-      <Text style={css_Inicial.entrarText}>Entrar</Text>
-    </TouchableOpacity>
-    
-    <TouchableOpacity onPress={cadastrarButton} style={css_Inicial.cadastrarBtn}>
-      <Text style={css_Inicial.cadastrarText}>Cadastre-se</Text>
-    </TouchableOpacity>
+      <TouchableOpacity onPress={entrarButton} style={css_Inicial.entrarBtn}>
+        <Text style={css_Inicial.entrarText}>Entrar</Text>
+      </TouchableOpacity>
+      
+      <TouchableOpacity onPress={cadastrarButton} style={css_Inicial.cadastrarBtn}>
+        <Text style={css_Inicial.cadastrarText}>Cadastre-se</Text>
+      </TouchableOpacity>
 
-    <TouchableOpacity>
-      <Text style={css_Inicial.visitanteText}>Acessar como visitante</Text>
-    </TouchableOpacity>
+      <View style={css_Inicial.viewVisitante}>
+      <TouchableOpacity>
+        <Text style={css_Inicial.visitanteText}>Acessar como visitante</Text>
+      </TouchableOpacity>
+      </View>
+
   </View>
+  </>
   )
 }
 
@@ -74,8 +93,8 @@ const css_Inicial = StyleSheet.create({
  
   image: {
     position:'absolute',
-    top: PixelRatio.roundToNearestPixel(141),
-    bottom: '55%',
+    top: PixelRatio.roundToNearestPixel(60),
+    bottom: '50%',
     width:PixelRatio.roundToNearestPixel(229),
     height:PixelRatio.roundToNearestPixel(231),
   },
@@ -98,18 +117,19 @@ const css_Inicial = StyleSheet.create({
   nomeText: {
     position:'absolute',
     color: '#2DCDB0',
-    top: '50%',
+    top: '40%',
     fontWeight: '400',
     fontSize: PixelRatio.roundToNearestPixel(65),
     lineHeight: PixelRatio.roundToNearestPixel(90),
     textAlign: 'center',
+    fontFamily:"poppins_regular",
   },
   sloganText: {
     position:'absolute',
     color: 'grey',
-    top: '50%',
+    top: '51.5%',
     fontWeight: '400',
-    fontSize: PixelRatio.roundToNearestPixel(20),
+    fontSize: PixelRatio.roundToNearestPixel(18),
     lineHeight: PixelRatio.roundToNearestPixel(24),
     textAlign: 'center',
   },
@@ -161,7 +181,6 @@ const css_Inicial = StyleSheet.create({
   },
 
   visitanteText:{
-    bottom: '10%',
     height: PixelRatio.roundToNearestPixel(19),
     bottom: PixelRatio.roundToNearestPixel(76),
     fontWeight: '600',
@@ -170,7 +189,18 @@ const css_Inicial = StyleSheet.create({
     color:'#2DCDB0',
     opacity: 0.7,
     alignContent:'center',
-  }
+  },
+
+  viewVisitante:{
+    marginTop: 720,
+    height: PixelRatio.roundToNearestPixel(19),
+    fontWeight: '600',
+    fontSize: PixelRatio.roundToNearestPixel(20),
+    lineHeight: PixelRatio.roundToNearestPixel(19),
+    color:'#2DCDB0',
+    opacity: 0.7,
+    alignContent:'center',
+  },
 });
 
 function Screen_Entrar(){

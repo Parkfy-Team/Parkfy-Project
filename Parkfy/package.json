@@ -16,7 +16,13 @@
     "expo-status-bar": "~1.4.0",
     "react": "18.0.0",
     "react-native": "0.69.4",
-    "styled-component": "^2.8.0"
+    "styled-component": "^2.8.0",
+    "expo-app-loading": "~2.1.0"
+  },
+  "rnpm": {
+    "assets": [
+      "./assets/fonts/"
+    ]
   },
   "devDependencies": {
     "@babel/core": "^7.12.9"
