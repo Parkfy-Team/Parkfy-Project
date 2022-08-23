@@ -178,21 +178,20 @@ function Screen_Entrar(){
   const [password, setPassword] = useState("");
  
   return (
-    <View style={css_Entrar.body}>
-      
-      <View style={css_Entrar.emailBtn}>
+    <View style={css_Entrar.emailView}>
+
+      <View style={css_Entrar.emailText}>
         <TextInput
-          style={css_Entrar.emailText}
-          placeholder="Email"
-          placeholderTextColor="#BDBDBD"
-          autoCapitalize = "none"
-          onChangeText={(email) => setEmail(email)}
+         style={css_Entrar.emailText}
+         placeholder="Email"
+         placeholderTextColor="#BDBDBD"
+         autoCapitalize = "none"
         />
       </View>
-      
+
       <Text style={css_Entrar.entrarLoginText}>Entrar</Text>
- 
-      <View style={css_Entrar.senhaBtn}>
+
+      <View style={css_Entrar.senhaView}>
         <TextInput
           style={css_Entrar.senhaText}
           placeholder="Senha"
@@ -213,13 +212,52 @@ function Screen_Entrar(){
   )
 }
 const css_Entrar = StyleSheet.create({
-  body: {
-    flex: 1,
-    backgroundColor: "white",
-    alignItems: "center",
-    justifyContent: "center",
+  emailView:{
+    width: PixelRatio.roundToNearestPixel(343),
+    height: PixelRatio.roundToNearestPixel(46),
+    display: 'flex',
+    flexDirection:"column",
+    alignItems:"center",
+    padding:(15,15),
+    borderRadius: PixelRatio.roundToNearestPixel(8),
+    backgroundColor: "#F6F6F6",
+    borderWidth: PixelRatio.roundToNearestPixel(1),
+    borderColor: "rgba(232, 232, 232, 1.0)",
+    bottom: PixelRatio.roundToNearestPixel(80),
   },
-  
+
+  emailText:{
+    height: PixelRatio.roundToNearestPixel(19),
+    fontSize: PixelRatio.roundToNearestPixel(16),
+    fontWeight: "500",
+    fontStyle: "normal",
+    lineHeight: PixelRatio.roundToNearestPixel(16),
+    color: "black"
+  },
+
+  senhaView:{
+    width: PixelRatio.roundToNearestPixel(343),
+    height: PixelRatio.roundToNearestPixel(46),
+    display: 'flex',
+    flexDirection:"column",
+    alignItems:"flex-start",
+    padding:(15,15),
+    borderRadius: PixelRatio.roundToNearestPixel(8),
+    backgroundColor: "#F6F6F6",
+    borderWidth: PixelRatio.roundToNearestPixel(1),
+    borderColor: "rgba(232, 232, 232, 1.0)",
+    bottom: PixelRatio.roundToNearestPixel(100),
+  },
+
+  senhaText:{
+    height: PixelRatio.roundToNearestPixel(19),
+    fontSize: PixelRatio.roundToNearestPixel(16),
+    fontWeight: "500",
+    fontStyle: "normal",
+    lineHeight: PixelRatio.roundToNearestPixel(16),
+    color: "black"
+  },
+
   entrarLoginText: {
     width: PixelRatio.roundToNearestPixel(89),
     height: PixelRatio.roundToNearestPixel(36),
@@ -230,6 +268,12 @@ const css_Entrar = StyleSheet.create({
     textAlign: "center",
     color: "#000000",
     bottom: PixelRatio.roundToNearestPixel(250)
+  },
+  body: {
+    flex: 1,
+    backgroundColor: "white",
+    alignItems: "center",
+    justifyContent: "center",
   },
  
   image: {
@@ -294,54 +338,7 @@ const css_Entrar = StyleSheet.create({
   visitanteText:{
     marginTop: 20,
     color: '#2DCDB0',
-  },
-
-  emailBtn:{
-    width: PixelRatio.roundToNearestPixel(343),
-    height: PixelRatio.roundToNearestPixel(46),
-    display: 'flex',
-    flexDirection:"column",
-    alignItems:"left",
-    padding:(15,15),
-    borderRadius: PixelRatio.roundToNearestPixel(8),
-    backgroundColor: "#F6F6F6",
-    borderWidth: PixelRatio.roundToNearestPixel(1),
-    borderColor: "rgba(232, 232, 232, 1.0)",
-    bottom: PixelRatio.roundToNearestPixel(80),
-  },
-
-  emailText:{
-    height: PixelRatio.roundToNearestPixel(19),
-    fontSize: PixelRatio.roundToNearestPixel(16),
-    fontWeight: "500",
-    fontStyle: "normal",
-    lineHeight: PixelRatio.roundToNearestPixel(16),
-    color: "black"
-  },
-  
-  senhaBtn:{
-    width: PixelRatio.roundToNearestPixel(343),
-    height: PixelRatio.roundToNearestPixel(46),
-    display: 'flex',
-    flexDirection:"column",
-    alignItems:"left",
-    padding:(15,15),
-    borderRadius: PixelRatio.roundToNearestPixel(8),
-    backgroundColor: "#F6F6F6",
-    borderWidth: PixelRatio.roundToNearestPixel(1),
-    borderColor: "rgba(232, 232, 232, 1.0)",
-    bottom: PixelRatio.roundToNearestPixel(100),
-  },
-
-  senhaText:{
-    height: PixelRatio.roundToNearestPixel(19),
-    fontSize: PixelRatio.roundToNearestPixel(16),
-    fontWeight: "500",
-    fontStyle: "normal",
-    lineHeight: PixelRatio.roundToNearestPixel(16),
-    color: "black"
   }
-
 });
 
 
