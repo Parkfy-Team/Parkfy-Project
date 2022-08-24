@@ -285,7 +285,7 @@ const css_Entrar = StyleSheet.create({
   },
   
   senhaView: {
-    top: PixelRatio.roundToNearestPixel(144),
+    top: PixelRatio.roundToNearestPixel(148),
     left: PixelRatio.roundToNearestPixel(18),
   },
   
