@@ -226,7 +226,9 @@ function Screen_Entrar({navigation}){
         />
       </View>
 
-      <Text style={css_Entrar.entrarLoginText}>Entrar</Text>
+      <View style={css_Entrar.entrarLoginView}>
+        <Text style={css_Entrar.entrarLoginText}>Entrar</Text>
+      </View>
       
       <TouchableOpacity>
         <View style={css_Entrar.cadastroView}>
@@ -244,8 +246,8 @@ function Screen_Entrar({navigation}){
         />
       </View>
  
-      <TouchableOpacity>
-        <Text style={css_Entrar.forgotBtn}>Esqueci minha senha</Text>
+      <TouchableOpacity style={css_Entrar.forgotView}>
+        <Text style={css_Entrar.forgotText}>Esqueci minha senha</Text>
       </TouchableOpacity>
  
       <TouchableOpacity style={css_Entrar.loginBtn}>
@@ -256,12 +258,17 @@ function Screen_Entrar({navigation}){
 }
 const css_Entrar = StyleSheet.create({
   entrarLoginText: {
+    position: 'absolute',
     fontSize: 30,
     fontWeight: "600",
     fontStyle: "normal",
     lineHeight: 30,
     textAlign: "center",
     color: "#000000",
+  },
+  
+  entrarLoginView: {
+    alignItems: "center",
     top: 20,
   },
   
@@ -278,7 +285,7 @@ const css_Entrar = StyleSheet.create({
   },
   
   senhaView: {
-    top: PixelRatio.roundToNearestPixel(110),
+    top: PixelRatio.roundToNearestPixel(144),
     left: PixelRatio.roundToNearestPixel(18),
   },
   
@@ -289,12 +296,14 @@ const css_Entrar = StyleSheet.create({
     lineHeight: 16,
   },
   
-  forgotBtn: {
-    height: PixelRatio.roundToNearestPixel(19),
-    width: PixelRatio.roundToNearestPixel(136),
-    top: PixelRatio.roundToNearestPixel(140),
+  forgotView: {
+    alignItems: "center",
+    top: PixelRatio.roundToNearestPixel(173)
+  },
+  
+  forgotText: {
+    position: "absolute",
     color: "#2DCDB0",
-    marginLeft: PixelRatio.roundToNearestPixel(130)
   },
   
   loginBtn: {
@@ -304,7 +313,7 @@ const css_Entrar = StyleSheet.create({
     padding:(16,16),
     position: "absolute",
     height: PixelRatio.roundToNearestPixel(56),
-    top: PixelRatio.roundToNearestPixel(310),
+    top: PixelRatio.roundToNearestPixel(300),
     width: PixelRatio.roundToNearestPixel(343),
     backgroundColor: '#2DCDB0',
     borderRadius: PixelRatio.roundToNearestPixel(100),
@@ -323,10 +332,10 @@ const css_Entrar = StyleSheet.create({
   
   cadastroView: {
     position: "absolute",
-    top: -7,
-    left: 295,
-    width: 80,
-    height: 20,
+    top: 25,
+    left: PixelRatio.roundToNearestPixel(300),
+    width: PixelRatio.roundToNearestPixel(80),
+    height: PixelRatio.roundToNearestPixel(20),
     color: "#2DCDB0"
   },
   
@@ -335,8 +344,10 @@ const css_Entrar = StyleSheet.create({
   },
   
   closeBtn: {
-    marginLeft: 25,
-    top: 65
+    width: PixelRatio.roundToNearestPixel(16),
+    height: PixelRatio.roundToNearestPixel(16),
+    marginLeft: PixelRatio.roundToNearestPixel(20),
+    top: PixelRatio.roundToNearestPixel(65),
   }
   
 });
