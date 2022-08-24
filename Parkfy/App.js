@@ -229,7 +229,9 @@ function Screen_Entrar({navigation}){
       <Text style={css_Entrar.entrarLoginText}>Entrar</Text>
       
       <TouchableOpacity>
-        <Text style={css_Entrar.cadastroBtn}>Cadastre-se</Text>
+        <View style={css_Entrar.cadastroView}>
+          <Text style={css_Entrar.cadastroBtn}>Cadastre-se</Text>
+        </View>
       </TouchableOpacity>
 
       <View style={css_Entrar.senhaView}>
@@ -319,11 +321,17 @@ const css_Entrar = StyleSheet.create({
     textAlign: 'center',
   },
   
+  cadastroView: {
+    position: "absolute",
+    top: -7,
+    left: 295,
+    width: 80,
+    height: 20,
+    color: "#2DCDB0"
+  },
+  
   cadastroBtn: {
-    textAlign: "right",
-    marginRight: PixelRatio.roundToNearestPixel(20),
-    top: PixelRatio.roundToNearestPixel(-5),
-    color: "#2DCDB0",
+    color: "#2DCDB0"
   },
   
   closeBtn: {
