@@ -18,7 +18,7 @@ import {ScrollView,
   import { useFonts } from 'expo-font';
   import React, { useState } from "react";
   
-  import {css_Entrar} from '../styles/Loginstyle.js';
+  import {css_Entrar} from '../styles/LoginStyle.js';
 
 
 

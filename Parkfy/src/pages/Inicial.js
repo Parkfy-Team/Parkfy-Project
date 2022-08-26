@@ -18,7 +18,7 @@ import { StatusBar, TurboModuleRegistry } from 'react-native';
 import { useFonts } from 'expo-font';
 import React, { useState } from "react";
 
-import {css_Inicial} from '../styles/Inicialstyle.js';
+import {css_Inicial} from '../styles/InicialStyle.js';
 
 
 function Screen_Inicial({navigation}){
