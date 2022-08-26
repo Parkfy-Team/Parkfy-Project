@@ -65,6 +65,10 @@ import {ScrollView,
             onChangeText={(password) => setPassword(password)}
           />
         </View>
+        
+        <TouchableOpacity style={css_Entrar.mostrarSenhaView}>
+          <Text style={css_Entrar.mostrarSenhaText}>Mostrar</Text>
+        </TouchableOpacity>
    
         <TouchableOpacity style={css_Entrar.forgotView}>
           <Text style={css_Entrar.forgotText}>Esqueci minha senha</Text>

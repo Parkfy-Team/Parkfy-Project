@@ -52,6 +52,16 @@ const css_Entrar = StyleSheet.create({
       lineHeight: 16,
     },
     
+    mostrarSenhaView: {
+      top: PixelRatio.roundToNearestPixel(125),
+      left: PixelRatio.roundToNearestPixel(300),
+    },
+    
+    mostrarSenhaText: {
+      position: "absolute",
+      color: "#2DCDB0",
+    },
+    
     forgotView: {
       alignItems: "center",
       top: PixelRatio.roundToNearestPixel(173)
