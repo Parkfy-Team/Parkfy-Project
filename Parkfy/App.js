@@ -32,6 +32,7 @@ import Perfil from './src/pages/Perfil';
 import FormasPagamento from './src/pages/FormasPagamento';
 import Busca from './src/pages/Busca';
 import MeusCarros from './src/pages/MeusCarros';
+import HistoricoVagas from './src/pages/HistoricoVagas';
 /* importar telas*/
 
 
@@ -89,6 +90,9 @@ function App() {
             name='Screen_MeusCarros'
             component={MeusCarros} />  
         </Stack.Navigator>
+          <Stack.Screen
+              name='Screen_HistoricoVagas'
+              component={HistoricoVagas} />  
       </NavigationContainer>
     </>
   )
