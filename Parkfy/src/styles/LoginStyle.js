@@ -17,6 +17,36 @@ const css_Entrar = StyleSheet.create({
       flex: 1,
       backgroundColor: "white",      
     },
+  
+    boxColumn: {
+    borderColor:'#E8E8E8',
+    borderWidth:1,
+    width: PixelRatio.roundToNearestPixel(343),
+    backgroundColor:'#F6F6F6',
+    borderRadius: PixelRatio.roundToNearestPixel(8),
+    top: PixelRatio.roundToNearestPixel(90),
+    left: PixelRatio.roundToNearestPixel(18),
+    height: PixelRatio.roundToNearestPixel(50),
+    margin: 5,
+  },
+    
+    textColumn: {
+    position:'absolute',
+    fontSize: 16,
+    fontWeight: "500",
+    fontStyle: "normal",
+    lineHeight: 16,
+    marginLeft: 10,
+    height: 45,
+  },
+    
+    container:{
+    flexDirection:'column',
+    position:'relative',
+    alignItems: 'flex-start',
+    width: PixelRatio.roundToNearestPixel(343),
+  },
+  
     entrarLoginText: {
       position: 'absolute',
       fontSize: 30,
@@ -29,46 +59,19 @@ const css_Entrar = StyleSheet.create({
     
     entrarLoginView: {
       alignItems: "center",
-      top: 20,
-    },
-    
-    emailView: {
-      top: PixelRatio.roundToNearestPixel(130),
-      left: PixelRatio.roundToNearestPixel(18),
-    },
-    
-    emailText: {
-      fontSize: 16,
-      fontWeight: "500",
-      fontStyle: "normal",
-      lineHeight: 16,
-    },
-    
-    senhaView: {
-      top: PixelRatio.roundToNearestPixel(148),
-      left: PixelRatio.roundToNearestPixel(18),
-    },
-    
-    senhaText: {
-      fontSize: 16,
-      fontWeight: "500",
-      fontStyle: "normal",
-      lineHeight: 16,
-    },
-    
-    mostrarSenhaView: {
-      top: PixelRatio.roundToNearestPixel(125),
-      left: PixelRatio.roundToNearestPixel(300),
+      top: 30,
     },
     
     mostrarSenhaText: {
       position: "absolute",
       color: "#2DCDB0",
+      right: PixelRatio.roundToNearestPixel(10),
+      top: PixelRatio.roundToNearestPixel(13),
     },
     
     forgotView: {
       alignItems: "center",
-      top: PixelRatio.roundToNearestPixel(173)
+      top: PixelRatio.roundToNearestPixel(115)
     },
     
     forgotText: {
@@ -102,7 +105,7 @@ const css_Entrar = StyleSheet.create({
     
     cadastroView: {
       position: "absolute",
-      top: 25,
+      top: 35,
       left: PixelRatio.roundToNearestPixel(300),
       width: PixelRatio.roundToNearestPixel(80),
       height: PixelRatio.roundToNearestPixel(20),
@@ -117,7 +120,7 @@ const css_Entrar = StyleSheet.create({
       width: PixelRatio.roundToNearestPixel(16),
       height: PixelRatio.roundToNearestPixel(16),
       marginLeft: PixelRatio.roundToNearestPixel(20),
-      top: PixelRatio.roundToNearestPixel(65),
+      top: PixelRatio.roundToNearestPixel(53),
     }
     
   });

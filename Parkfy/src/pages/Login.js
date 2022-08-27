@@ -37,15 +37,6 @@ import {ScrollView,
           <Image source={require("../../assets/close.png")}/>
         </TouchableOpacity>
         
-        <View style={css_Entrar.emailView}>
-          <TextInput
-           style={css_Entrar.emailText}
-           placeholder="Email"
-           placeholderTextColor="#BDBDBD"
-           autoCapitalize = "none"
-          />
-        </View>
-  
         <View style={css_Entrar.entrarLoginView}>
           <Text style={css_Entrar.entrarLoginText}>Entrar</Text>
         </View>
@@ -55,20 +46,30 @@ import {ScrollView,
             <Text style={css_Entrar.cadastroBtn}>Cadastre-se</Text>
           </View>
         </TouchableOpacity>
+        
+        <View style={css_Entrar.container}>
+          <View style={css_Entrar.boxColumn}>
+            <TextInput
+            style={css_Entrar.textColumn}
+            placeholder="Email"
+            placeholderTextColor="#BDBDBD"
+            autoCapitalize = "none"
+            />
+          </View>
   
-        <View style={css_Entrar.senhaView}>
-          <TextInput
-            style={css_Entrar.senhaText}
+          <View style={css_Entrar.boxColumn}>
+            <TextInput
+            style={css_Entrar.textColumn}
             placeholder="Senha"
             placeholderTextColor="#BDBDBD"
             secureTextEntry={true}
             onChangeText={(password) => setPassword(password)}
           />
+          <TouchableOpacity style={css_Entrar.mostrarSenhaView}>
+            <Text style={css_Entrar.mostrarSenhaText}>Mostrar</Text>
+          </TouchableOpacity>
+          </View>
         </View>
-        
-        <TouchableOpacity style={css_Entrar.mostrarSenhaView}>
-          <Text style={css_Entrar.mostrarSenhaText}>Mostrar</Text>
-        </TouchableOpacity>
    
         <TouchableOpacity style={css_Entrar.forgotView}>
           <Text style={css_Entrar.forgotText}>Esqueci minha senha</Text>
