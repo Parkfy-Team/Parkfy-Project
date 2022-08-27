@@ -13,6 +13,10 @@ import {ScrollView,
 
 
 const css_Entrar = StyleSheet.create({
+    body:{
+      flex: 1,
+      backgroundColor: "white",      
+    },
     entrarLoginText: {
       position: 'absolute',
       fontSize: 30,

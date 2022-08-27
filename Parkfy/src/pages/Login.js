@@ -31,7 +31,7 @@ import {ScrollView,
     }
    
     return (
-      <View style={css_Entrar.entrarBody}>
+      <View style={css_Entrar.body}>
         
         <TouchableOpacity onPress={closeButton} style={css_Entrar.closeBtn}>
           <Image source={require("../../assets/close.png")}/>

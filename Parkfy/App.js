@@ -40,6 +40,7 @@ function App() {
 
   const [fontsLoaded] = useFonts({
     'poppins_regular': require('./assets/fonts/poppins_regular.ttf'),
+    'Inter-Regular': require('./assets/fonts/Inter-Regular.ttf')
   });
 
   if (!fontsLoaded) {

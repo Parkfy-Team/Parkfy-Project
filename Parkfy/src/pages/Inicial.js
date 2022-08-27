@@ -27,7 +27,7 @@ function Screen_Inicial({navigation}){
       navigation.navigate('Screen_Entrar')
     }
     const cadastrarButton = () => {
-      navigation.navigate('Screen_Cadastrar')
+      navigation.navigate('Screen_Cadastro')
     }
   
     return(
