@@ -26,6 +26,9 @@ import {ScrollView,
   function Screen_Entrar({navigation}){
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+    const cadastreButton = () => {
+      navigation.navigate('Screen_Cadastro')
+    };
     const closeButton = () => {
       navigation.navigate('Screen_Inicial')
     }
@@ -41,7 +44,7 @@ import {ScrollView,
           <Text style={css_Entrar.entrarLoginText}>Entrar</Text>
         </View>
         
-        <TouchableOpacity>
+        <TouchableOpacity onPress={cadastreButton}>
           <View style={css_Entrar.cadastroView}>
             <Text style={css_Entrar.cadastroBtn}>Cadastre-se</Text>
           </View>
