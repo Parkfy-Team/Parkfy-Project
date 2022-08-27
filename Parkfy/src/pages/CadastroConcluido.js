@@ -31,7 +31,15 @@ import {ScrollView,
   
     return(
     <>
-      <StatusBar barStyle={'light-content'}></StatusBar>        
+      <StatusBar barStyle={'light-content'}></StatusBar>
+
+      <View style={css_CadastroConcluido.body}></View>
+        
+      <Image style={css_CadastroConcluido.image} source={require("../../assets/checked.png")} />
+        
+      <Text style={css_CadastroConcluido.cadastroConcluidoText}>Cadastro Concluído!</Text>
+
+      <Text style={css_CadastroConcluido.cadastroMessageText}>Seu Cadastro foi enviado para{"\n"}validação pela equipe de{"\n"}integridade do ParkFy e em{"\n"}poucos minutos, você deve{"\n"}receber uma página de{"\n"}verificação por e-mail para{"\n"}acessar o aplicativo.</Text>         
     </>
     )
   }
