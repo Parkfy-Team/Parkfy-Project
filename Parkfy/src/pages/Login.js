@@ -31,7 +31,8 @@ import {ScrollView,
     };
     const closeButton = () => {
       navigation.navigate('Screen_Inicial')
-    }
+    };
+    const [isSecureEntry,setIsSecureEntry] = useState(true)
    
     return (
       <View style={css_Entrar.body}>
@@ -65,12 +66,16 @@ import {ScrollView,
             style={css_Entrar.textColumn}
             placeholder="Senha"
             placeholderTextColor="#BDBDBD"
-            secureTextEntry={true}
+            secureTextEntry={isSecureEntry}
             onChangeText={(password) => setPassword(password)}
-          />
-          <TouchableOpacity style={css_Entrar.mostrarSenhaView}>
-            <Text style={css_Entrar.mostrarSenhaText}>Mostrar</Text>
-          </TouchableOpacity>
+            />
+            <TouchableOpacity
+              onPress={(event) => {
+                setIsSecureEntry((prev) => !prev);
+              }}
+            >
+              <Text style={css_Entrar.mostrarSenhaText}>{isSecureEntry ? 'Mostrar' : 'Esconder'}</Text>
+            </TouchableOpacity>
           </View>
         </View>
    
