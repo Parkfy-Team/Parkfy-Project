@@ -25,7 +25,8 @@ import {ScrollView,
   
   function Screen_Entrar({navigation}){
     const [email, setEmail] = useState("");
-    const [password, setPassword] = useState("");
+    const [senha, setSenha] = useState("");
+    
     const cadastreButton = () => {
       navigation.navigate('Screen_Cadastro')
     };
@@ -67,7 +68,7 @@ import {ScrollView,
             placeholder="Senha"
             placeholderTextColor="#BDBDBD"
             secureTextEntry={isSecureEntry}
-            onChangeText={(password) => setPassword(password)}
+            onChangeText={(senha) => setSenha(senha)}
             />
             <TouchableOpacity
               onPress={(event) => {
@@ -77,6 +78,8 @@ import {ScrollView,
               <Text style={css_Entrar.mostrarSenhaText}>{isSecureEntry ? 'Mostrar' : 'Esconder'}</Text>
             </TouchableOpacity>
           </View>
+
+          
         </View>
    
         <TouchableOpacity style={css_Entrar.forgotView}>

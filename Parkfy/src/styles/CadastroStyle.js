@@ -65,9 +65,9 @@ const css_Cadastro = StyleSheet.create({
     position:'absolute',
     marginTop: 10,
     height: PixelRatio.roundToNearestPixel(30),
-    width: PixelRatio.roundToNearestPixel(70),
+    width: PixelRatio.roundToNearestPixel(80),
     alignItems:'center',    
-    marginLeft: PixelRatio.roundToNearestPixel(273),
+    marginLeft: PixelRatio.roundToNearestPixel(270),
   },
   
   mostrarSenhaText: {
