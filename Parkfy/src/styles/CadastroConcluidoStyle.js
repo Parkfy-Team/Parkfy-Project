@@ -49,7 +49,31 @@ const css_CadastroConcluido = StyleSheet.create({
         fontWeight: '500',
         fontSize: PixelRatio.roundToNearestPixel(20),
         textAlign: 'center',
-    }
+    },
+    
+    okBtn: {
+        display: 'flex',
+        flexDirection:"column",
+        alignItems: 'center',
+        padding:(16,16),
+        position: "absolute",
+        height: PixelRatio.roundToNearestPixel(56),
+        bottom: PixelRatio.roundToNearestPixel(130),
+        width: PixelRatio.roundToNearestPixel(343),
+        backgroundColor: '#2DCDB0',
+        borderRadius: PixelRatio.roundToNearestPixel(100),
+        marginLeft: PixelRatio.roundToNearestPixel(25)
+    },
+    
+    okText: {
+        width: PixelRatio.roundToNearestPixel(80),
+        height: PixelRatio.roundToNearestPixel(24),
+        color:'white',
+        fontWeight: '600',
+        fontSize: PixelRatio.roundToNearestPixel(18),
+        lineHeight: PixelRatio.roundToNearestPixel(24),
+        textAlign: 'center',
+    },
 
 });
 

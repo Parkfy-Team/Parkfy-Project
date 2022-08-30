@@ -25,8 +25,8 @@ import {ScrollView,
     const entrarButton = () => {
       navigation.navigate('Screen_Entrar')
     }
-    const cadastrarButton = () => {
-      navigation.navigate('Screen_Cadastrar')
+    const okButton = () => {
+      navigation.navigate('Screen_Inicial')
     }
   
     return(
@@ -39,7 +39,11 @@ import {ScrollView,
         
       <Text style={css_CadastroConcluido.cadastroConcluidoText}>Cadastro Concluído!</Text>
 
-      <Text style={css_CadastroConcluido.cadastroMessageText}>Seu Cadastro foi enviado para{"\n"}validação pela equipe de{"\n"}integridade do ParkFy e em{"\n"}poucos minutos, você deve{"\n"}receber uma página de{"\n"}verificação por e-mail para{"\n"}acessar o aplicativo.</Text>         
+      <Text style={css_CadastroConcluido.cadastroMessageText}>Seu Cadastro foi enviado para{"\n"}validação pela equipe de{"\n"}integridade do ParkFy e em{"\n"}poucos minutos, você deve{"\n"}receber uma página de{"\n"}verificação por e-mail para{"\n"}acessar o aplicativo.</Text>
+
+      <TouchableOpacity onPress={okButton} style={css_CadastroConcluido.okBtn}>
+        <Text style={css_CadastroConcluido.okText}>OK</Text>
+      </TouchableOpacity>        
     </>
     )
   }

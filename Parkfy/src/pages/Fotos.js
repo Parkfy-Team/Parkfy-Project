@@ -25,8 +25,8 @@ import {ScrollView,
     const entrarButton = () => {
       navigation.navigate('Screen_Entrar')
     }
-    const cadastrarButton = () => {
-      navigation.navigate('Screen_Cadastrar')
+    const enviarButton = () => {
+      navigation.navigate('Screen_CadastroConcluido')
     }
   
     return(
@@ -47,6 +47,10 @@ import {ScrollView,
 
       <TouchableOpacity style={css_Fotos.selfieBtn}>
         <Text style={css_Fotos.selfieText}>Tirar Foto</Text>
+      </TouchableOpacity>
+        
+      <TouchableOpacity onPress={enviarButton} style={css_Fotos.enviarBtn}>
+        <Text style={css_Fotos.enviarText}>Enviar</Text>
       </TouchableOpacity>
     </>
     )
