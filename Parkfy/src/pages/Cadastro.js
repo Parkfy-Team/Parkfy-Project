@@ -38,12 +38,13 @@ function Screen_Cadastro({navigation}){
   const entrarButton = () => {
     navigation.navigate('Screen_Entrar')
   }    
-  const cadastrarButton = () => {
-    navigation.navigate('Screen_Cadastrar')
-  }
   const closeButton = () => {
     navigation.navigate('Screen_Inicial')
   }  
+
+  const cadastrarBtn = () => {
+    navigation.navigate('Screen_Fotos')
+  }
 
   const [genero, setGenero] = useState("");  
   
@@ -63,7 +64,7 @@ function Screen_Cadastro({navigation}){
           <Text style={css_Cadastro.textoPrincipalText}>Cadastre-se</Text>
         </View>
         
-        <TouchableOpacity>
+        <TouchableOpacity onPress={entrarButton}>
           <View style={css_Cadastro.entrarView}>
             <Text style={css_Cadastro.entrarBtn}>Entrar</Text>
           </View>
@@ -106,7 +107,7 @@ function Screen_Cadastro({navigation}){
             <MaskInput
                 style={css_Cadastro.textColumn}
                 value={telefone}
-                placeholder="Telefone"
+                placeholder="Telefone "
                 placeholderTextColor="#BDBDBD"
                 autoCapitalize = "none"
                 onChangeText={setTelefone}
@@ -166,7 +167,7 @@ function Screen_Cadastro({navigation}){
             </TouchableOpacity>
           </View>
 
-            <TouchableOpacity style={css_Cadastro.cadastroBtn}>
+            <TouchableOpacity style={css_Cadastro.cadastroBtn} onPress={cadastrarBtn}>
               <Text style={css_Cadastro.cadastroText}>Cadastrar</Text>
             </TouchableOpacity>
 
