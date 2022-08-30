@@ -33,6 +33,10 @@ import {ScrollView,
     const closeButton = () => {
       navigation.navigate('Screen_Inicial')
     };
+    const entrarButton = () => {
+      navigation.navigate('Screen_Home')
+    };
+
     const [isSecureEntry,setIsSecureEntry] = useState(true)
    
     return (
@@ -86,7 +90,7 @@ import {ScrollView,
           <Text style={css_Entrar.forgotText}>Esqueci minha senha</Text>
         </TouchableOpacity>
    
-        <TouchableOpacity style={css_Entrar.loginBtn}>
+        <TouchableOpacity style={css_Entrar.loginBtn} onPress={entrarButton}>
           <Text style={css_Entrar.loginText}>Entrar</Text>
         </TouchableOpacity>
       </View>

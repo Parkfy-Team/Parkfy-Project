@@ -132,7 +132,7 @@ function Screen_Cadastro({navigation}){
                 selectedValue={genero}
                 onValueChange={(itemValue, itemIndex) => setGenero(itemValue)}
               >
-                <Picker.Item color="#BDBDBD" fontFamily="Inter-Regular" label="Selecione" value="0" />
+                <Picker.Item color="#BDBDBD" fontFamily="Inter-Regular" label="Gênero" value="" />
                 <Picker.Item label="Masculino" value="1" />
                 <Picker.Item label="Feminino" value="2" />
                 <Picker.Item label="Não Binário" value="3" />
