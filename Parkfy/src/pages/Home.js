@@ -9,6 +9,7 @@ import {ScrollView,
   TextInput,
   Button,
   TouchableOpacity,
+  KeyboardAvoidingView,
 } from "react-native";
 import { Picker } from '@react-native-picker/picker'
 import MaskInput,{ Masks } from 'react-native-mask-input';
@@ -21,7 +22,6 @@ import { useFonts } from 'expo-font';
 import React, { useState } from "react";
   
   import {css_Home} from '../styles/HomeStyle.js';
-  import {css_Cadastro} from '../styles/CadastroStyle.js';
 
 
 
@@ -53,36 +53,63 @@ import React, { useState } from "react";
     return(
     <>
       <StatusBar backgroundColor={'white'} barStyle={'dark-content'}></StatusBar>
-    <KeyboardAwareScrollView  keyboardShouldPersistTaps={'always'}
-      style={{flex:1, backgroundColor:'white'}}
-      showsVerticalScrollIndicator={false}>
-    <View style={css_Cadastro.body}>    
+      <View style={css_Home.body}> 
 
-        <View style={css_Cadastro.textoPrincipalView}>
-          <Text style={css_Cadastro.textoPrincipalText}>Vagas</Text>
-        </View>      
+      <KeyboardAwareScrollView  keyboardShouldPersistTaps={'always'}        
+        contentContainerStyle={{flexGrow: 1}}
+        style={{backgroundColor:'red'}}
+        showsVerticalScrollIndicator={true}>    
+        
+          <View style={css_Home.textoPrincipalView}>
+            <Text style={css_Home.textoPrincipalText}>Vagas</Text>
+          </View>      
 
-        <View style={css_Cadastro.boxColumn}>
-            <TextInput
-            style={css_Cadastro.textColumn}
-            placeholder="Buscar Vaga"
-            placeholderTextColor="#BDBDBD"
-            />
-            <TouchableOpacity
-              style={css_Cadastro.mostrarSenhaView}
-              onPress={(event) => {((prev) => !prev);}}
-            >
-              <Text style={css_Cadastro.mostrarSenhaText}>Filtrar</Text>
+          <View style={css_Home.boxColumn}>
+              <TextInput
+              style={css_Home.textColumn}
+              placeholder="Buscar Vaga"
+              placeholderTextColor="#BDBDBD"
+              />
+              <TouchableOpacity
+                style={css_Home.mostrarSenhaView}
+                onPress={(event) => {((prev) => !prev);}}
+              >
+                <Text style={css_Home.mostrarSenhaText}>Filtrar</Text>
+              </TouchableOpacity>
+          </View>   
+            
+            <TouchableOpacity style={css_Home.cadastroBtn} onPress={cadastrarBtn}>
+              <Text style={css_Home.cadastroText}>arrumar</Text>
             </TouchableOpacity>
-          </View>    
+            <TouchableOpacity style={css_Home.cadastroBtn} onPress={cadastrarBtn}>
+              <Text style={css_Home.cadastroText}>arrumar</Text>
+            </TouchableOpacity>
+            <TouchableOpacity style={css_Home.cadastroBtn} onPress={cadastrarBtn}>
+              <Text style={css_Home.cadastroText}>arrumar</Text>
+            </TouchableOpacity>
+            <TouchableOpacity style={css_Home.cadastroBtn} onPress={cadastrarBtn}>
+              <Text style={css_Home.cadastroText}>arrumar</Text>
+            </TouchableOpacity>
+
+            <View style={{paddingBottom:50}}></View>
+        </KeyboardAwareScrollView>
+
+        <View style={{alignItems:'center',}}>
+          <View style={css_Home.footerBaseContorno}></View> 
+
+          <View style={css_Home.footerBase}></View>
           
-            <TouchableOpacity style={css_Cadastro.cadastroBtn} onPress={cadastrarBtn}>
-              <Text style={css_Cadastro.cadastroText}>arrumar</Text>
-            </TouchableOpacity>
+          <View style={css_Home.footermeialuass}></View> 
 
+          <View style={css_Home.footerMeiaLua}></View> 
 
         </View>
-    </KeyboardAwareScrollView>    
+
+
+      </View>
+      
+      
+        
   </>
     )
   }
