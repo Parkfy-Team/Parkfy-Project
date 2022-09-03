@@ -27,30 +27,35 @@ container:{
   alignItems: 'flex-start',
   width: PixelRatio.roundToNearestPixel(343),
 },
+
+textoPrincipalView: {
+  backgroundColor:'white',
+  alignItems: "center",
+  top: 10,
+  height:30,
+},
+
 textoPrincipalText: {
-  fontFamily:'Inter-Regular',
+  fontFamily:"poppins_regular",
   position: 'absolute',
   fontSize: PixelRatio.roundToNearestPixel(30),
   fontWeight: '700',
   fontStyle: "normal",
-  lineHeight: 30,
+  lineHeight: 20,
   textAlign: "center",
   color: "#000000",
-},
+  paddingTop: 15
+  
+}, 
 
-
-textoPrincipalView: {
-  alignItems: "center",
-  top: 40,
-},
 
 boxColumn: {
   borderColor:'#E8E8E8',
   borderWidth:1,
   width: PixelRatio.roundToNearestPixel(343),
   backgroundColor:'#F6F6F6',
-  borderRadius: PixelRatio.roundToNearestPixel(8),
-  top: PixelRatio.roundToNearestPixel(70),
+  borderRadius: PixelRatio.roundToNearestPixel(100),
+  top: PixelRatio.roundToNearestPixel(50),
   left: PixelRatio.roundToNearestPixel(18),
   height: PixelRatio.roundToNearestPixel(50),
   margin: 5,
@@ -63,6 +68,23 @@ textColumn: {
   fontStyle: "normal",
   lineHeight: 16,
   marginLeft: 10,
+  height: 45,
+},
+
+nearbyView:{
+  marginTop:'20%',
+  backgroundColor:'white',
+  alignItems: 'flex-start',
+  height:30,
+},
+
+nearbyText: {
+  position:'absolute',
+  fontSize: 24,
+  fontWeight: "500",
+  fontStyle: "normal",
+  lineHeight: 24,
+  marginLeft: 15,
   height: 45,
 },
 
@@ -81,6 +103,15 @@ mostrarSenhaText: {
   position: "absolute",
   color: "#2DCDB0",
   marginRight: 10,
+}, 
+voltarText: {
+  fontSize: 15,
+  position: "absolute",
+  color: "#2DCDB0",
+  marginRight: 10,
+  marginTop:1,
+  width: PixelRatio.roundToNearestPixel(50),
+  height: PixelRatio.roundToNearestPixel(20),
 }, 
 
 
@@ -124,11 +155,12 @@ entrarBtn: {
 },
 
 closeBtn: {
+  position:'absolute',
   marginTop:1,
   width: PixelRatio.roundToNearestPixel(16),
   height: PixelRatio.roundToNearestPixel(10),
   marginLeft: PixelRatio.roundToNearestPixel(20),
-  top: PixelRatio.roundToNearestPixel(30),
+  top: PixelRatio.roundToNearestPixel(16),
 },
 
 footerBase:{

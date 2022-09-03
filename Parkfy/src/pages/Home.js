@@ -53,16 +53,23 @@ import React, { useState } from "react";
     return(
     <>
       <StatusBar backgroundColor={'white'} barStyle={'dark-content'}></StatusBar>
+      
       <View style={css_Home.body}> 
 
       <KeyboardAwareScrollView  keyboardShouldPersistTaps={'always'}        
         contentContainerStyle={{flexGrow: 1}}
-        style={{backgroundColor:'red'}}
-        showsVerticalScrollIndicator={true}>    
-        
+        style={{backgroundColor:'white'}}
+        showsVerticalScrollIndicator={true}> 
+
+          
+
           <View style={css_Home.textoPrincipalView}>
             <Text style={css_Home.textoPrincipalText}>Vagas</Text>
-          </View>      
+          </View>
+
+          <TouchableOpacity onPress={closeButton} style={css_Home.closeBtn}>
+              <Text style={css_Home.voltarText}>Voltar</Text>
+          </TouchableOpacity>
 
           <View style={css_Home.boxColumn}>
               <TextInput
@@ -78,9 +85,9 @@ import React, { useState } from "react";
               </TouchableOpacity>
           </View>   
             
-            <TouchableOpacity style={css_Home.cadastroBtn} onPress={cadastrarBtn}>
-              <Text style={css_Home.cadastroText}>arrumar</Text>
-            </TouchableOpacity>
+            <View style={css_Home.nearbyView}>
+              <Text style={css_Home.nearbyText}>Próximas a mim</Text>
+            </View>
             <TouchableOpacity style={css_Home.cadastroBtn} onPress={cadastrarBtn}>
               <Text style={css_Home.cadastroText}>arrumar</Text>
             </TouchableOpacity>

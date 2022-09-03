@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "@fontsource/poppins": "^4.5.9",
-    "@react-native-picker/picker": "^2.4.4",
+    "@react-native-picker/picker": "2.4.2",
     "@react-navigation/native": "^6.0.11",
     "@react-navigation/stack": "^6.2.2",
     "expo": "~46.0.8",
