@@ -34,7 +34,6 @@ import Busca from './src/pages/Busca';
 import MeusCarros from './src/pages/MeusCarros';
 import HistoricoVagas from './src/pages/HistoricoVagas';
 import UsarCamera from './src/pages/Camera';
-import { Camera } from 'expo-camera';
 /* importar telas*/
 
 
