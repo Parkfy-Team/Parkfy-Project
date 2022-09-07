@@ -33,6 +33,8 @@ import FormasPagamento from './src/pages/FormasPagamento';
 import Busca from './src/pages/Busca';
 import MeusCarros from './src/pages/MeusCarros';
 import HistoricoVagas from './src/pages/HistoricoVagas';
+import UsarCamera from './src/pages/Camera';
+import { Camera } from 'expo-camera';
 /* importar telas*/
 
 
@@ -89,7 +91,10 @@ function App() {
             component={Busca} />
           <Stack.Screen
             name='Screen_MeusCarros'
-            component={MeusCarros} />  
+            component={MeusCarros} />
+          <Stack.Screen
+            name='Screen_Camera'
+            component={UsarCamera} />  
         </Stack.Navigator>
           <Stack.Screen
               name='Screen_HistoricoVagas'
