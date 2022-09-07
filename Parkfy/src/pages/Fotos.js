@@ -28,6 +28,12 @@ import {ScrollView,
     const enviarButton = () => {
       navigation.navigate('Screen_CadastroConcluido')
     }
+    const fotoDocBtn = () => {
+      navigation.navigate('Screen_Camera')
+    }
+    const selfieBtn = () => {
+      navigation.navigate('Screen_Camera')
+    }
   
     return(
     <>
@@ -39,13 +45,13 @@ import {ScrollView,
       
       <Text style={css_Fotos.fotoDocRequestText}>1. Tire a foto de um documento de identificação válido (RG ou CNH)</Text>
         
-      <TouchableOpacity style={css_Fotos.fotoDocBtn}>
+      <TouchableOpacity onPress={fotoDocBtn} style={css_Fotos.fotoDocBtn}>
         <Text style={css_Fotos.fotoDocText}>Tirar Foto</Text>
       </TouchableOpacity>
 
       <Text style={css_Fotos.selfieRequestText}>2. Tire uma Selfie segurando{"\n"}o documento enquadrando o{"\n"}seu rosto (evite usar óculos, boné{"\n"}e outros objetos que dificultem a{"\n"}sua identificação)</Text>
 
-      <TouchableOpacity style={css_Fotos.selfieBtn}>
+      <TouchableOpacity onPress={selfieBtn} style={css_Fotos.selfieBtn}>
         <Text style={css_Fotos.selfieText}>Tirar Foto</Text>
       </TouchableOpacity>
         
