@@ -24,8 +24,8 @@ const css_Entrar = StyleSheet.create({
     width: PixelRatio.roundToNearestPixel(343),
     backgroundColor:'#F6F6F6',
     borderRadius: PixelRatio.roundToNearestPixel(8),
-    top: PixelRatio.roundToNearestPixel(90),
-    left: PixelRatio.roundToNearestPixel(18),
+    top: PixelRatio.roundToNearestPixel(145),
+    left: PixelRatio.roundToNearestPixel(30),
     height: PixelRatio.roundToNearestPixel(50),
     margin: 5,
   },
@@ -37,14 +37,16 @@ const css_Entrar = StyleSheet.create({
     fontStyle: "normal",
     lineHeight: 16,
     marginLeft: 10,
-    height: 45,
+    height: 20,
+    width: 270,
+    top: 15,
   },
     
     container:{
     flexDirection:'column',
     position:'relative',
     alignItems: 'flex-start',
-    width: PixelRatio.roundToNearestPixel(343),
+    width: PixelRatio.roundToNearestPixel(3),
   },
   
     entrarLoginText: {
@@ -59,19 +61,19 @@ const css_Entrar = StyleSheet.create({
     
     entrarLoginView: {
       alignItems: "center",
-      top: 30,
+      top: 85,
     },
     
     mostrarSenhaText: {
       position: "absolute",
       color: "#2DCDB0",
       right: PixelRatio.roundToNearestPixel(10),
-      top: PixelRatio.roundToNearestPixel(13),
+      top: PixelRatio.roundToNearestPixel(17),
     },
     
     forgotView: {
       alignItems: "center",
-      top: PixelRatio.roundToNearestPixel(115)
+      top: PixelRatio.roundToNearestPixel(170)
     },
     
     forgotText: {
@@ -86,11 +88,11 @@ const css_Entrar = StyleSheet.create({
       padding:(16,16),
       position: "absolute",
       height: PixelRatio.roundToNearestPixel(56),
-      top: PixelRatio.roundToNearestPixel(300),
+      top: PixelRatio.roundToNearestPixel(335),
       width: PixelRatio.roundToNearestPixel(343),
       backgroundColor: '#2DCDB0',
       borderRadius: PixelRatio.roundToNearestPixel(100),
-      marginLeft: PixelRatio.roundToNearestPixel(25)
+      marginLeft: PixelRatio.roundToNearestPixel(35)
     },
     
     loginText: {
@@ -105,11 +107,11 @@ const css_Entrar = StyleSheet.create({
     
     cadastroView: {
       position: "absolute",
-      top: 35,
-      left: PixelRatio.roundToNearestPixel(300),
-      width: PixelRatio.roundToNearestPixel(80),
-      height: PixelRatio.roundToNearestPixel(20),
-      color: "#2DCDB0"
+      top: 90,
+      right: PixelRatio.roundToNearestPixel(25),
+      width: PixelRatio.roundToNearestPixel(70),
+      height: PixelRatio.roundToNearestPixel(15),
+      color: "#2DCDB0",
     },
     
     cadastroBtn: {
@@ -117,10 +119,9 @@ const css_Entrar = StyleSheet.create({
     },
     
     closeBtn: {
-      width: PixelRatio.roundToNearestPixel(16),
-      height: PixelRatio.roundToNearestPixel(16),
-      marginLeft: PixelRatio.roundToNearestPixel(20),
-      top: PixelRatio.roundToNearestPixel(53),
+      position: "absolute",
+      marginLeft: PixelRatio.roundToNearestPixel(25),
+      top: PixelRatio.roundToNearestPixel(85),
     }
     
   });
