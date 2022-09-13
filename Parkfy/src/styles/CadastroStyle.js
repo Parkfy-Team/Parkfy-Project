@@ -48,7 +48,7 @@ const css_Cadastro = StyleSheet.create({
     top: PixelRatio.roundToNearestPixel(150),
     left: PixelRatio.roundToNearestPixel(30),
     height: PixelRatio.roundToNearestPixel(50),
-    margin: 5,
+    margin: 7,
   },
   
   textColumn: {
@@ -58,20 +58,20 @@ const css_Cadastro = StyleSheet.create({
     fontStyle: "normal",
     lineHeight: 16,
     marginLeft: 10,
-    height: 45,
+    height: 50,
   },
   
   mostrarSenhaView: {
     position:'absolute',
     marginTop: 10,
     height: PixelRatio.roundToNearestPixel(30),
-    width: PixelRatio.roundToNearestPixel(70),
+    width: PixelRatio.roundToNearestPixel(100),
     alignItems:'center',    
-    marginLeft: PixelRatio.roundToNearestPixel(270),
+    marginLeft: PixelRatio.roundToNearestPixel(250),
   },
   
   mostrarSenhaText: {
-    marginTop: 5,
+    marginTop: 3,
     fontSize: 17,
     position: "absolute",
     color: "#2DCDB0",
@@ -104,7 +104,7 @@ const css_Cadastro = StyleSheet.create({
     position: "absolute",
     top: PixelRatio.roundToNearestPixel(88),
     left: PixelRatio.roundToNearestPixel(330),
-    width: PixelRatio.roundToNearestPixel(47),
+    width: PixelRatio.roundToNearestPixel(60),
     height: PixelRatio.roundToNearestPixel(20),
     color: "#2DCDB0",
   },
