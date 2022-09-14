@@ -32,7 +32,7 @@ const css_Entrar = StyleSheet.create({
     
     textColumn: {
     position:'absolute',
-    fontSize: 16,
+    fontSize: 17,
     fontWeight: "500",
     fontStyle: "normal",
     lineHeight: 16,
@@ -68,7 +68,8 @@ const css_Entrar = StyleSheet.create({
       position: "absolute",
       color: "#2DCDB0",
       right: PixelRatio.roundToNearestPixel(10),
-      top: PixelRatio.roundToNearestPixel(17),
+      top: PixelRatio.roundToNearestPixel(14),
+      fontSize: 18,
     },
     
     forgotView: {
@@ -79,6 +80,7 @@ const css_Entrar = StyleSheet.create({
     forgotText: {
       position: "absolute",
       color: "#2DCDB0",
+      fontSize: 20,
     },
     
     loginBtn: {
@@ -109,13 +111,14 @@ const css_Entrar = StyleSheet.create({
       position: "absolute",
       top: 90,
       right: PixelRatio.roundToNearestPixel(25),
-      width: PixelRatio.roundToNearestPixel(70),
+      width: PixelRatio.roundToNearestPixel(90),
       height: PixelRatio.roundToNearestPixel(15),
       color: "#2DCDB0",
     },
     
     cadastroBtn: {
-      color: "#2DCDB0"
+      color: "#2DCDB0",
+      fontSize: 20,
     },
     
     closeBtn: {
