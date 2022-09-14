@@ -22,7 +22,7 @@ const css_CadastroConcluido = StyleSheet.create({
     
     image: {
         position:'absolute',
-        top: PixelRatio.roundToNearestPixel(40),
+        top: PixelRatio.roundToNearestPixel(100),
         left: '25%',      
         width:PixelRatio.roundToNearestPixel(200),
         height:PixelRatio.roundToNearestPixel(200),
@@ -32,8 +32,8 @@ const css_CadastroConcluido = StyleSheet.create({
         fontFamily:"poppins_regular",
         position:'absolute',
         color: 'white',
-        top: PixelRatio.roundToNearestPixel(265),
-        left: PixelRatio.roundToNearestPixel(40),
+        top: PixelRatio.roundToNearestPixel(325),
+        left: PixelRatio.roundToNearestPixel(80),
         textAlign: 'center',
         fontWeight: '500',
         fontSize: PixelRatio.roundToNearestPixel(30),
@@ -44,8 +44,8 @@ const css_CadastroConcluido = StyleSheet.create({
         fontFamily:"poppins_regular",
         position:'absolute',
         color: 'grey',
-        top: PixelRatio.roundToNearestPixel(320),
-        left: PixelRatio.roundToNearestPixel(40),
+        top: PixelRatio.roundToNearestPixel(370),
+        left: PixelRatio.roundToNearestPixel(85),
         fontWeight: '500',
         fontSize: PixelRatio.roundToNearestPixel(20),
         textAlign: 'center',
@@ -58,11 +58,11 @@ const css_CadastroConcluido = StyleSheet.create({
         padding:(16,16),
         position: "absolute",
         height: PixelRatio.roundToNearestPixel(56),
-        bottom: PixelRatio.roundToNearestPixel(130),
-        width: PixelRatio.roundToNearestPixel(343),
+        bottom: PixelRatio.roundToNearestPixel(270),
+        width: PixelRatio.roundToNearestPixel(300),
         backgroundColor: '#2DCDB0',
         borderRadius: PixelRatio.roundToNearestPixel(100),
-        marginLeft: PixelRatio.roundToNearestPixel(25)
+        marginLeft: PixelRatio.roundToNearestPixel(55)
     },
     
     okText: {

@@ -24,7 +24,7 @@ const css_Camera = StyleSheet.create({
         backgroundColor: '#2DCDB0',
         margin: PixelRatio.roundToNearestPixel(20),
         borderRadius: PixelRatio.roundToNearestPixel(10),
-        height: PixelRatio.roundToNearestPixel(50),
+        height: PixelRatio.roundToNearestPixel(70),
     },
     
     camera: {

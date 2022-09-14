@@ -17,6 +17,7 @@ import {ScrollView,
   import { StatusBar, TurboModuleRegistry } from 'react-native';
   import { useFonts } from 'expo-font';
   import React, { useState } from "react";
+  import { FontAwesome } from '@expo/vector-icons';
   
   import {css_Fotos} from '../styles/FotosStyle.js';
 
@@ -56,7 +57,7 @@ import {ScrollView,
       </TouchableOpacity>
         
       <TouchableOpacity onPress={enviarButton} style={css_Fotos.enviarBtn}>
-        <Text style={css_Fotos.enviarText}>Enviar</Text>
+        <FontAwesome name="send" size={23} color="white"/>  
       </TouchableOpacity>
     </>
     )
