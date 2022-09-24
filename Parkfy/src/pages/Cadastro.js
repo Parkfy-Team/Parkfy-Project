@@ -8,6 +8,7 @@ import {ScrollView,
   Image,
   TextInput,
   Button,
+  ActionSheetIOS,
   TouchableOpacity,
 } from "react-native";
 import { Picker } from '@react-native-picker/picker'
@@ -19,6 +20,7 @@ const Stack = createStackNavigator();
 import { StatusBar, TurboModuleRegistry } from 'react-native';
 import { useFonts } from 'expo-font';
 import React, { useState } from "react";
+import { FontAwesome } from '@expo/vector-icons';
 
 import {css_Cadastro} from '../styles/CadastroStyle.js';
 
@@ -46,7 +48,7 @@ function Screen_Cadastro({navigation}){
     navigation.navigate('Screen_Fotos')
   }
 
-  const [genero, setGenero] = useState("");  
+  const [genero, setGenero] = useState("");
   
   return(
   <>
@@ -57,7 +59,7 @@ function Screen_Cadastro({navigation}){
     <View style={css_Cadastro.body}>      
         
         <TouchableOpacity onPress={closeButton} style={css_Cadastro.closeBtn}>
-          <Image source={require("../../assets/close.png")}/>
+          <FontAwesome name="close" size={23} color="black"/>
         </TouchableOpacity>        
         
         <View style={css_Cadastro.textoPrincipalView}>

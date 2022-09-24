@@ -17,6 +17,7 @@ import {ScrollView,
   import { StatusBar, TurboModuleRegistry } from 'react-native';
   import { useFonts } from 'expo-font';
   import React, { useState } from "react";
+  import { FontAwesome } from '@expo/vector-icons';
   
   import {css_Entrar} from '../styles/LoginStyle.js';
 
@@ -43,7 +44,7 @@ import {ScrollView,
       <View style={css_Entrar.body}>
         
         <TouchableOpacity onPress={closeButton} style={css_Entrar.closeBtn}>
-          <Image source={require("../../assets/close.png")}/>
+          <FontAwesome name="close" size={23} color="black"/>
         </TouchableOpacity>
         
         <View style={css_Entrar.entrarLoginView}>

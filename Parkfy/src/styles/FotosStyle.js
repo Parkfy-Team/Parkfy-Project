@@ -24,7 +24,7 @@ const css_Fotos = StyleSheet.create({
         fontFamily:"poppins_regular",
         position:'absolute',
         color: 'white',
-        top: PixelRatio.roundToNearestPixel(5),
+        top: PixelRatio.roundToNearestPixel(90),
         left: PixelRatio.roundToNearestPixel(20),
         fontWeight: '500',
         fontSize: PixelRatio.roundToNearestPixel(40),
@@ -35,7 +35,7 @@ const css_Fotos = StyleSheet.create({
         fontFamily:"poppins_regular",
         position:'absolute',
         color: 'grey',
-        top: PixelRatio.roundToNearestPixel(55),
+        top: PixelRatio.roundToNearestPixel(140),
         left: PixelRatio.roundToNearestPixel(20),
         fontWeight: '500',
         fontSize: PixelRatio.roundToNearestPixel(20),
@@ -47,7 +47,7 @@ const css_Fotos = StyleSheet.create({
         fontFamily:"poppins_regular",
         position:'absolute',
         color: 'grey',
-        top: PixelRatio.roundToNearestPixel(180),
+        top: PixelRatio.roundToNearestPixel(225),
         left: PixelRatio.roundToNearestPixel(20),
         fontWeight: '500',
         fontSize: PixelRatio.roundToNearestPixel(20),
@@ -62,11 +62,11 @@ const css_Fotos = StyleSheet.create({
         padding:(16,16),
         position: "absolute",
         height: PixelRatio.roundToNearestPixel(56),
-        top: PixelRatio.roundToNearestPixel(270),
+        top: PixelRatio.roundToNearestPixel(320),
         width: PixelRatio.roundToNearestPixel(343),
         backgroundColor: '#2DCDB0',
         borderRadius: PixelRatio.roundToNearestPixel(100),
-        marginLeft: PixelRatio.roundToNearestPixel(25)
+        marginLeft: PixelRatio.roundToNearestPixel(35)
     },
     
     fotoDocText: {
@@ -83,7 +83,7 @@ const css_Fotos = StyleSheet.create({
         fontFamily:"poppins_regular",
         position:'absolute',
         color: 'grey',
-        top: PixelRatio.roundToNearestPixel(340),
+        top: PixelRatio.roundToNearestPixel(405),
         left: PixelRatio.roundToNearestPixel(20),
         fontWeight: '500',
         fontSize: PixelRatio.roundToNearestPixel(20),
@@ -98,11 +98,11 @@ const css_Fotos = StyleSheet.create({
         padding:(16,16),
         position: "absolute",
         height: PixelRatio.roundToNearestPixel(56),
-        bottom: PixelRatio.roundToNearestPixel(115),
+        bottom: PixelRatio.roundToNearestPixel(270),
         width: PixelRatio.roundToNearestPixel(343),
         backgroundColor: '#2DCDB0',
         borderRadius: PixelRatio.roundToNearestPixel(100),
-        marginLeft: PixelRatio.roundToNearestPixel(25)
+        marginLeft: PixelRatio.roundToNearestPixel(35)
     },
     
     selfieText: {
@@ -122,11 +122,11 @@ const css_Fotos = StyleSheet.create({
         padding:(16,16),
         position: "absolute",
         height: PixelRatio.roundToNearestPixel(56),
-        bottom: PixelRatio.roundToNearestPixel(35),
+        bottom: PixelRatio.roundToNearestPixel(160),
         width: PixelRatio.roundToNearestPixel(120),
         backgroundColor: '#2DCDB0',
         borderRadius: PixelRatio.roundToNearestPixel(100),
-        marginLeft: PixelRatio.roundToNearestPixel(140)
+        marginLeft: PixelRatio.roundToNearestPixel(150)
     },
     
     enviarText: {

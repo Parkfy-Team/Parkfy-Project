@@ -34,6 +34,8 @@ import Busca from './src/pages/Busca';
 import MeusCarros from './src/pages/MeusCarros';
 import HistoricoVagas from './src/pages/HistoricoVagas';
 import UsarCamera from './src/pages/Camera';
+import NovoCarro from './src/pages/NovoCarro';
+
 /* importar telas*/
 
 
@@ -93,11 +95,15 @@ function App() {
             component={MeusCarros} />
           <Stack.Screen
             name='Screen_Camera'
-            component={UsarCamera} />  
-        </Stack.Navigator>
+            component={UsarCamera} />
           <Stack.Screen
-              name='Screen_HistoricoVagas'
-              component={HistoricoVagas} />  
+            name='Screen_HistoricoVagas'
+            component={HistoricoVagas} />
+          <Stack.Screen
+            name='Screen_NovoCarro'
+            component={NovoCarro} />  
+        </Stack.Navigator>
+            
       </NavigationContainer>
     </>
   )

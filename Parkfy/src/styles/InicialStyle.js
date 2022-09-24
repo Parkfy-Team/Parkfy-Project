@@ -21,7 +21,7 @@ const css_Inicial = StyleSheet.create({
    
     image: {
       position:'absolute',
-      top: PixelRatio.roundToNearestPixel(60),
+      top: PixelRatio.roundToNearestPixel(150),
       bottom: '50%',
       width:PixelRatio.roundToNearestPixel(229),
       height:PixelRatio.roundToNearestPixel(231),
@@ -45,7 +45,7 @@ const css_Inicial = StyleSheet.create({
     nomeText: {
       position:'absolute',
       color: '#2DCDB0',
-      top: '40%',
+      top: '45%',
       fontWeight: '400',
       fontSize: PixelRatio.roundToNearestPixel(65),
       lineHeight: PixelRatio.roundToNearestPixel(90),
@@ -55,7 +55,7 @@ const css_Inicial = StyleSheet.create({
     sloganText: {
       position:'absolute',
       color: 'grey',
-      top: '51.5%',
+      top: '56%',
       fontWeight: '400',
       fontSize: PixelRatio.roundToNearestPixel(18),
       lineHeight: PixelRatio.roundToNearestPixel(24),
@@ -69,7 +69,7 @@ const css_Inicial = StyleSheet.create({
       padding:(16,16),
       position: "absolute",
       height: PixelRatio.roundToNearestPixel(56),
-      bottom: PixelRatio.roundToNearestPixel(126),
+      bottom: PixelRatio.roundToNearestPixel(176),
       width: PixelRatio.roundToNearestPixel(343),
       backgroundColor: '#2DCDB0',
       borderRadius: PixelRatio.roundToNearestPixel(100),    
@@ -92,7 +92,7 @@ const css_Inicial = StyleSheet.create({
       padding:(16,16),
       position: "absolute",
       height: PixelRatio.roundToNearestPixel(56),
-      bottom: PixelRatio.roundToNearestPixel(208),
+      bottom: PixelRatio.roundToNearestPixel(250),
       width: PixelRatio.roundToNearestPixel(343),
       backgroundColor: '#2DCDB0',
       borderRadius: PixelRatio.roundToNearestPixel(100),    
@@ -120,7 +120,7 @@ const css_Inicial = StyleSheet.create({
     },
   
     viewVisitante:{
-      marginTop: 720,
+      marginTop: 800,
       height: PixelRatio.roundToNearestPixel(19),
       fontWeight: '600',
       fontSize: PixelRatio.roundToNearestPixel(20),
