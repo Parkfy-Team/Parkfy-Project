@@ -35,7 +35,7 @@ import {ScrollView,
       navigation.navigate('Screen_Inicial')
     };
     const entrarButton = () => {
-      navigation.navigate('Screen_Home')
+      navigation.navigate('Screen_Busca')
     };
 
     const [isSecureEntry,setIsSecureEntry] = useState(true)
